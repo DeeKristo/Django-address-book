@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/signup">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" value={{ fname }} >
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname" value={{ lname }}>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="phone" class="form-control" id="phone" name="phone" value={{ phone }}>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="address" class="form-control" id="address" name="address" value={{ address }}>
+        </div>
+        <div class="form-group">
+            <label for="relationship">Relationship</label>
+            <input type="relationship" class="form-control" id="relationship" name="relationship" value={{ relationship }}>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button> &nbsp;<button type="submit" class="btn btn-primary">Delete</button>
+    </form>
+</body>
+</html>
